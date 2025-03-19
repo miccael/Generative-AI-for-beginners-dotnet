@@ -7,6 +7,6 @@ IChatClient client = new ChatCompletionsClient(
         new AzureKeyCredential(Environment.GetEnvironmentVariable("GITHUB_TOKEN") ?? throw new InvalidOperationException("Missing GITHUB_TOKEN environment variable. Ensure you followed the instructions to setup a GitHub Token to use GitHub Models.")))
         .AsChatClient("Phi-3.5-MoE-instruct");
 
-var response = await client.GetResponseAsync("What is AI?");
+var response = await client.GetResponseAsync("What is a Banana? Write only a single sentence.");
 
 Console.WriteLine(response.Message);
