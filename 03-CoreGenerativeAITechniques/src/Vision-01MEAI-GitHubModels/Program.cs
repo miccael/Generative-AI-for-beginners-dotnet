@@ -30,7 +30,7 @@ var promptReceipt = "I bought the coffee and the sausage. How much do I owe? Add
 
 // prompts
 string systemPrompt = @"You are a useful assistant that describes images using a direct style.";
-var prompt = promptDescribe;
+var prompt = promptAnalyze;
 string imageFileName = imgRunningShoes;
 string image = Path.Combine(Directory.GetCurrentDirectory(), "images", imageFileName);
 
