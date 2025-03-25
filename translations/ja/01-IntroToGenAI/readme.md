@@ -11,11 +11,11 @@ _⬆️画像をクリックして動画を視聴⬆️_
 ## このレッスンで学べること：
 
 - 🌟 生成AIの基本概念とその応用について理解する
-- 🔍 MEAI、Semantic Kernel、Azure OpenAIなど、AI開発における.NETツールを探索する
+- 🔍 MEAI、セマンティック カーネル、Azure OpenAIなど、AI開発における.NETツールを探索する
 
 ## .NETのための生成AIの基礎
 
-コードに入る前に、生成AI（GenAI）の基本的な概念を復習しましょう。このレッスンでは、**.NETのための生成AIの基礎**について学びます。これにより、なぜ特定の方法で実行する必要があるのかを理解できるようになります。また、アプリ構築に使用するツールやSDK（**MEAI** (Microsoft.Extensions.AI)、**Semantic Kernel**、**VS Code用AIツールキット拡張機能**など）も紹介します。
+コードに入る前に、生成AI（GenAI）の基本的な概念を復習しましょう。このレッスンでは、**.NETのための生成AIの基礎**について学びます。これにより、なぜ特定の方法で実行する必要があるのかを理解できるようになります。また、アプリ構築に使用するツールやSDK（**MEAI** (Microsoft.Extensions.AI)、**セマンティック カーネル**、**VS Code用AIツールキット拡張機能**など）も紹介します。
 
 ### 生成AIの概念を簡単におさらい
 
@@ -91,19 +91,19 @@ public interface IChatClient : IDisposable
 > 📖 **ドキュメント**：Microsoft.Extensions.AI (MEAI) についてさらに詳しくは、[MEAI ドキュメント](https://learn.microsoft.com/dotnet/ai/ai-extensions)を参照してください。
  
 
-#### Semantic Kernel (SK)
+#### セマンティック カーネル (SK)
 
-Semantic Kernelは、生成AI言語モデルを.NETアプリケーションに統合するためのオープンソースSDKです。AIサービスやメモリ（ベクトル）ストアの抽象化を提供し、AIによって自動的にオーケストレーションされるプラグインの作成を可能にします。また、OpenAPI標準を使用して、外部APIと対話するAIエージェントを作成することも可能です。
+セマンティック カーネルは、生成AI言語モデルを.NETアプリケーションに統合するためのオープンソースSDKです。AIサービスやメモリ（ベクトル）ストアの抽象化を提供し、AIによって自動的にオーケストレーションされるプラグインの作成を可能にします。また、OpenAPI標準を使用して、外部APIと対話するAIエージェントを作成することも可能です。
 
-![*図：Semantic Kernel (SK) SDK.*](../../../translated_images/semantic-kernel.c6a96edb209a3c0d5c6564284cfc47975f49fcfedc3ed55b9e84f2d4a628e04a.ja.png)
+![*図：セマンティック カーネル (SK) SDK.*](../../../translated_images/semantic-kernel.c6a96edb209a3c0d5c6564284cfc47975f49fcfedc3ed55b9e84f2d4a628e04a.ja.png)
 
-Semantic Kernelは.NETだけでなく、JavaやPythonなどの他の言語もサポートしており、多くのコネクタ、関数、プラグインを統合のために提供します。Semantic Kernelの主な機能には以下が含まれます：
+セマンティック カーネルは.NETだけでなく、JavaやPythonなどの他の言語もサポートしており、多くのコネクタ、関数、プラグインを統合のために提供します。セマンティック カーネルの主な機能には以下が含まれます：
 
-- **Kernel Core**：AIサービスやモデルと対話するためのコネクタ、関数、プラグインなど、Semantic Kernelのコア機能を提供します。KernelはSemantic Kernelの中心であり、サービスやプラグインを利用可能にし、必要に応じてそれらを取得し、エージェントを監視し、アプリケーションのミドルウェアとして機能します。
+- **Kernel Core**：AIサービスやモデルと対話するためのコネクタ、関数、プラグインなど、セマンティック カーネルのコア機能を提供します。Kernelはセマンティック カーネルの中心であり、サービスやプラグインを利用可能にし、必要に応じてそれらを取得し、エージェントを監視し、アプリケーションのミドルウェアとして機能します。
 
     例えば、特定のタスクに最適なAIサービスを選択し、プロンプトをサービスに送信し、応答をアプリケーションに返すことができます。以下はKernel Coreが動作する様子を示す図です：
 
-    ![*図：Semantic Kernel (SK) Kernel Core.*](../../../translated_images/semantic-kernel-core.c30e9e4b9674f7a90d2145844d467bff5046268e0bb3c9f69ae21c19fd443a9d.ja.png)
+    ![*図：セマンティック カーネル (SK) Kernel Core.*](../../../translated_images/semantic-kernel-core.c30e9e4b9674f7a90d2145844d467bff5046268e0bb3c9f69ae21c19fd443a9d.ja.png)
 
 - **AIサービスコネクタ**：AIサービスを複数のプロバイダーに抽象化レイヤーとして提供し、共通かつ一貫したインターフェースを持つ例（チャット補完、テキストから画像、音声からテキストなど）を提供します。
 
@@ -115,11 +115,11 @@ Semantic Kernelは.NETだけでなく、JavaやPythonなどの他の言語もサ
 
 - **フィルタ**：関数の実行タイミングや方法を制御し、セキュリティや責任あるAIの実践を向上させます。
 
-Semantic Kernelでは、完全なループは以下の図のようになります：
+セマンティック カーネルでは、完全なループは以下の図のようになります：
 
-![*図：Semantic Kernel (SK) 完全ループ.*](../../../translated_images/semantic-kernel-full-loop.cfdc3187979869b8188fa171e390298b4eb215be3c77ab538a62f71cc16cfdcd.ja.png)
+![*図：セマンティック カーネル (SK) 完全ループ.*](../../../translated_images/semantic-kernel-full-loop.cfdc3187979869b8188fa171e390298b4eb215be3c77ab538a62f71cc16cfdcd.ja.png)
 
-> 📖 **ドキュメント**：Semantic Kernelについてさらに詳しくは、[Semantic Kernel ドキュメント](https://learn.microsoft.com/semantic-kernel/overview)を参照してください。
+> 📖 **ドキュメント**：セマンティック カーネルについてさらに詳しくは、[セマンティック カーネル ドキュメント](https://learn.microsoft.com/semantic-kernel/overview)を参照してください。
 
 ## 結論
 

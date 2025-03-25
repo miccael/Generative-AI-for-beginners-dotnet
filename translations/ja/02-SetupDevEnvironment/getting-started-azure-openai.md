@@ -111,7 +111,7 @@ Azure AI Foundry モデルを使用するには、Azure AI Foundry ポータル�
     using Azure.AI.OpenAI;
     using Microsoft.Extensions.AI;
 
-1. Create new variables to hold the model name, endpoint, and API key:
+1. モデル名、エンドポイント、API key を保持するための新しい変数を作成します。
 
     ```csharp
     var deploymentName = "< deployment name > "; // 例: "gpt-4o-mini"
@@ -121,7 +121,7 @@ Azure AI Foundry モデルを使用するには、Azure AI Foundry ポータル�
 
     Making sure to replace `< deployment name >`, and `< endpoint >` with the values you noted above.
 
-1. Replace the `IChatClient` creation with the following code:
+1. `IChatClient` の作成を次のコードに置き換えます。
 
     ```csharp
     IChatClient client = new AzureOpenAIClient(
@@ -130,13 +130,13 @@ Azure AI Foundry モデルを使用するには、Azure AI Foundry ポータル�
     .AsChatClient(deploymentName);
     ```
 
-1. Run the following command in the terminal:
+1. ターミナルで次のコマンドを実行します。
 
     ```bash
     dotnet run
     ```
 
-1. You should see output similar to the following:
+1. 次のような出力が表示されます。
 
     ```bash
     人工知能 (AI) とは、人間の知能を模倣するようにプログラムされた機械を指します。AI は、人間の知能を必要とするタスクをコンピューターやシステムが実行できるようにするさまざまな技術やアプローチを包含しています。これには以下のタスクが含まれます：
@@ -163,7 +163,7 @@ Azure AI Foundry モデルを使用するには、Azure AI Foundry ポータル�
 
 次は、最初の AI アプリケーションを作成する方法を学びます！ 🚀
 
-👉 [コア生成 AI テクニック](../03-CoreGenerativeAITechniques/readme.md)
+👉 [生成 AI のコア技術](../03-CoreGenerativeAITechniques/readme.md)
 
 **免責事項**:  
 この文書は、機械翻訳AIサービスを使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確さが含まれる場合があります。元の言語で作成された原文が信頼できる正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳をお勧めします。この翻訳の使用に起因する誤解や誤った解釈について、当方は一切の責任を負いません。

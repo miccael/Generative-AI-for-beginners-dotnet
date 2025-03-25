@@ -1,4 +1,4 @@
-# GenAIの責任ある利用
+# 生成 AIの責任ある利用
 
 生成AIは強力な機能を提供しますが、その実装が倫理的で、公平で、安全であることを確保することが重要です。このレッスンでは、.NETアプリケーションに責任あるAIの原則を効果的に組み込む方法を探ります。
 
@@ -83,7 +83,7 @@
 - [Fairlearn - A Python package to assess AI system's fairness](https://techcommunity.microsoft.com/blog/educatordeveloperblog/fairlearn---a-python-package-to-assess-ai-systems-fairness/1402950)
 - [Azure AI Content Safety](https://azure.microsoft.com/products/ai-services/ai-content-safety/): コンテンツを効果的にモデレートする。
 - [Azure AI Services](https://azure.microsoft.com/products/cognitive-services/): 倫理的なAIソリューションを構築する。
-- [Microsoft Learn - Responsible AI](https://learn.microsoft.com/training/modules/embrace-responsible-ai-principles-practices/): 責任あるAIの実践を探る。
+- [Microsoft Learn - 責任ある AI](https://learn.microsoft.com/training/modules/embrace-responsible-ai-principles-practices/): 責任あるAIの実践を探る。
 - [Microsoft Responsible AI](https://www.microsoft.com/ai/responsible-ai): Microsoftが実践する責任あるAIについて学ぶ。
 
 **免責事項**:  
