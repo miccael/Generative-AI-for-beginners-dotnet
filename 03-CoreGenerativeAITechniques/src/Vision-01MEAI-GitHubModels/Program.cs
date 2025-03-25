@@ -4,6 +4,7 @@ using Azure.AI.Inference;
 using Azure;
 
 var githubToken = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+
 if (string.IsNullOrEmpty(githubToken))
 {
     var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
