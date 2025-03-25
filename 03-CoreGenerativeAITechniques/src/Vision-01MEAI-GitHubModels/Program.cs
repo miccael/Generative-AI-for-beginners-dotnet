@@ -24,7 +24,7 @@ string imgReceipt = "german-receipt.jpg";
 
 // prompts
 var promptDescribe = "Describe the image";
-var promptAnalyze = "How many red shoes are in the picture? and what other shoes colors are there?";
+var promptAnalyze = "How many white shoes are in the picture? and what other shoes colors are there?";
 var promptOcr = "What is the text in this picture? Is there a theme for this?";
 var promptReceipt = "I bought the coffee and the sausage. How much do I owe? Add a 18% tip.";
 
@@ -51,3 +51,18 @@ var response = await chatClient.GetResponseAsync(messages);
 Console.WriteLine($"Prompt: {prompt}");
 Console.WriteLine($"Image: {imageFileName}");
 Console.WriteLine($"Response: {response.Message}");
+
+
+
+messages.Add(new ChatMessage(Microsoft.Extensions.AI.ChatRole.User, "This is a receipt from a lunch. I had the Eggs Benedict. How much of a tip should I leave?"));
+
+string image_g = Path.Combine(Directory.GetCurrentDirectory(), "images", "german-receipt.jpg");
+
+AIContent aic_g = new DataContent(File.ReadAllBytes(image_g), "image/jpeg");
+var message_g = new ChatMessage(Microsoft.Extensions.AI.ChatRole.User, [aic_g]);
+    messages.Add(message_g);
+
+response = await chatClient.GetResponseAsync(messages);
+messages.Add(response.Message);
+
+Console.WriteLine(response.Message.Text);
