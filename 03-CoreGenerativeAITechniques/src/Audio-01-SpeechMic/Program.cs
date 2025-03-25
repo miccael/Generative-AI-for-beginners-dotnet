@@ -18,7 +18,7 @@ var speechTranslationConfig = SpeechTranslationConfig.FromSubscription(speechKey
 speechTranslationConfig.SpeechRecognitionLanguage = "en-US";
 speechTranslationConfig.AddTargetLanguage("es-ES");
 
-using var audioConfig = AudioConfig.FromDefaultMicrophoneInput();
+using var audioConfig = AudioConfig.FromMicrophoneInput("{0.0.1.00000000}.{960ed895-385e-4917-bd13-d02ad262ca7a}");
 using var translationRecognizer = new TranslationRecognizer(speechTranslationConfig, audioConfig);
 
 Console.WriteLine("Speak into your microphone.");
