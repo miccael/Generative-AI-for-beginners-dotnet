@@ -2,11 +2,15 @@
 using Microsoft.CognitiveServices.Speech.Audio;
 using Microsoft.CognitiveServices.Speech.Translation;
 using Microsoft.Extensions.Configuration;
+using System;
 
 
 // get key and region
 string? speechKey = Environment.GetEnvironmentVariable("SPEECH_KEY");
 string? speechRegion = Environment.GetEnvironmentVariable("SPEECH_REGION");
+
+
+
 if (string.IsNullOrEmpty(speechKey) || string.IsNullOrEmpty(speechRegion))
 {
     var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
