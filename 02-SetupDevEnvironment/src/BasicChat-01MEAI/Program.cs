@@ -19,4 +19,5 @@ IChatClient client = new AzureOpenAIClient(
 
 var response = await client.GetResponseAsync("What is a Banana? Write only a single sentence.");
 
+// Write a line with the response
 Console.WriteLine(response.Message);
