@@ -30,11 +30,11 @@ Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/e
 
 We're constantly improving this course with the latest AI tools and models:
 
-- **phi4-mini model support**: The [Ollama Codespace](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/02-SetupDevEnvironment/getting-started-ollama.md) now automatically downloads the [phi4-mini model](https://ollama.com/library/phi4-mini) - Microsoft's compact yet powerful LLM. Try it in samples like:
-  - [Chat Application](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/03-CoreGenerativeAITechniques/src/BasicChat-03Ollama/Program.cs) - Experience fast responses with this efficient model
-  - [RAG Implementation](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/03-CoreGenerativeAITechniques/src/RAGSimple-10SKOllama/Program.cs) - See how phi4-mini handles retrieval-augmented generation tasks
-  - Learn more about the model in the [Phi Cookbook](https://aka.ms/phicookbook)
-
+- **MCP Library Integration**: We've integrated the [Model Context Protocol C# SDK](https://github.com/modelcontextprotocol/csharp-sdk) to provide a standardized way to communicate with AI models across different providers. This allows for more consistent model interactions while reducing provider lock-in. Check our samples in the Core Techniques section!
+  - [5 min video overview of an Aspire + MCP demo](https://www.youtube.com/watch?v=2holzbob1_I)
+  - Sample code for the video in the [04-PracticalSamples/src/Aspire.MCP.Sample.sln](./04-PracticalSamples/src/Aspire.MCP.Sample.sln) solution.
+  
+[View all previous updates in our What's New section](./10-WhatsNew/readme.md)
 
 ## 🚀 Introduction
 
